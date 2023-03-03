@@ -14,8 +14,5 @@ router.get('/profile', requiresAuth(), function (req, res, next) {
     title: 'Profile page'
   });
 });
-router.get('/logout', requiresAuth(),function(req,res,next){
-  req.oidc.user = "";
-  res.redirect('https://localhost:3000/')
-})
+
 module.exports = router;
